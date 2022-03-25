@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<tasks xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd-schema.xsd">
+    <task name="Create table" date="25.03.2022" note="Need an Excel table with all workers" creator="Peter Varik"/>
+    <task name="Delete feature" date="30.03.2022" note="The feature is not working" creator="John Smith" />
+    <task name="Add documentation" date="25.03.2022" note="There will be new workers, create documentation" creator="John Smith" />
+    <task name="Make me a coffee" date="20.03.2022" creator="Peter Varik"/>
+</tasks>

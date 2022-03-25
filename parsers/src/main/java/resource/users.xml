@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd-schema.xsd">
+    <workers id="wor">
+        <worker name="Jane Webster" login="ilovecats66" password="123password456"/>
+        <worker name="Chris Kim" login="cricket12" password="klo00Hto" />
+        <worker name="Jake Wolf" login="lone_wolf" password="redcoin88" /> <!-- New worker -->
+    </workers>
+
+    <managers id="man">
+        <manager name="Peter Varik" login="peterparker" password="peterissecret" />
+        <manager name="John Smith" login="agent007" password="beourking78" />
+    </managers>
+
+    <moderators id="mod">
+        <moderator name="Julian King" login="kingofjungle" password="ling90ling" />
+    </moderators>
+
+</users>

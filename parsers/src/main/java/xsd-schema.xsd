@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="https://www.taskManager.com/">
+    <xs:element name="users">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="workers">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="worker" type="userType" minOccurs="1"/>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:int" use="required" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="managers">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="manager" type="userType"/>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:int" use="required" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="moderators">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="moderator" type="userType" maxOccurs="2"/>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:int" use="required" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="userType">
+        <xs:attribute name="name" type="xs:string" default="noName"/>
+        <xs:attribute name="login" type="xs:string" use="required"/>
+        <xs:attribute name="password" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:element name="tasks" type="taskType" />
+
+    <xs:complexType name="taskType">
+        <xs:sequence>
+            <xs:element name="task">
+                <xs:complexType>
+                    <xs:attribute name="name" type="xs:string" use="required"/>
+                    <xs:attribute name="date" type="xs:date" use="required"/>
+                    <xs:attribute name="note" type="xs:string"/>
+                    <xs:attribute name="creator" type="xs:string" use="required" />
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
